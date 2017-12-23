@@ -23,7 +23,10 @@ Plug 'itchyny/lightline.vim'
 " Toggle between hybrid and absolute line numbers
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-" Navigation
+" Motions
+Plug 'justinmk/vim-sneak'
+
+" File navigation
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
