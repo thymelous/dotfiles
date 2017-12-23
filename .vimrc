@@ -15,7 +15,7 @@ filetype plugin indent on
 " Plugins
 "
 
-execute pathogen#infect()
+source $HOME/.vim/plugins.vim
 
 " onedark.vim
 let g:onedark_color_overrides = {
@@ -71,3 +71,8 @@ nnoremap <silent> <C-t> :tabnew<CR>
 " Center search results on the matching line
 map N Nzz
 map n nzz
+
+" ...
+nnoremap <Leader>A :BasmJumpToAddr 
+nnoremap <silent> <Leader>a :call BasmPrintAddr()<CR>
+nnoremap <silent> <Leader>w :call BasmJumpToLabel()<CR>
