@@ -8,6 +8,8 @@ fi
 # Vim with clipboard support
 alias vim="vimx"
 
+alias yt="mpsyt"
+
 # PS1
 
 function _set_ps1() {
