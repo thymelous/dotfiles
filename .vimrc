@@ -63,7 +63,9 @@ nnoremap <Leader>j :GFiles<CR>
 nnoremap <Leader>J :Files<CR>
 nnoremap <Leader>g :Ag<CR>
 
+"
 " Tabs
+"
 nnoremap <silent> <A-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabprevious<CR>
 nnoremap <silent> <C-t> :tabnew<CR>
@@ -71,6 +73,12 @@ nnoremap <silent> <C-t> :tabnew<CR>
 " Center search results on the matching line
 map N Nzz
 map n nzz
+
+" Breaking bad habits...
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " ...
 nnoremap <Leader>A :BasmJumpToAddr 
