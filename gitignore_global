@@ -1,0 +1,13 @@
+# Cherry-picked from https://github.com/github/gitignore
+
+# Symlink this file to ~/.config/git/ignore
+# (you may need to create the git directory)
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# IDEA
+.idea/
