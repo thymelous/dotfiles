@@ -26,5 +26,11 @@ sudo dnf -y install docker-ce
 sudo systemctl enable docker
 sudo systemctl start docker
 
+# Docker Compose
+compose_version=1.18.0
+sudo curl -L https://github.com/docker/compose/releases/download/${compose_version}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L https://raw.githubusercontent.com/docker/compose/${compose_version}/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
 # Langs
 curl -sSL https://get.haskellstack.org/ | sh
