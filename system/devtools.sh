@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Dependencies
+sudo dnf -y install gcc-c++ ncurses-devel openssl-devel unixODBC-devel
+
 # Java
 sudo dnf -y install java-1.8.0-openjdk
 
@@ -7,7 +10,7 @@ sudo dnf -y install java-1.8.0-openjdk
 sudo dnf -y install httpie
 
 # Text editing
-sudo dnf -y install vim vim-X11 fzf inotify-tools
+sudo dnf -y install vim vim-X11 fzf the_silver_searcher inotify-tools
 
 # asdf version manager
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.1
