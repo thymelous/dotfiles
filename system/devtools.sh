@@ -4,7 +4,7 @@
 sudo dnf -y install gcc-c++ ncurses-devel openssl-devel unixODBC-devel
 
 # Java
-sudo dnf -y install java-1.8.0-openjdk
+sudo dnf -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 
 # CLI HTTP client
 sudo dnf -y install httpie
