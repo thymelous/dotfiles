@@ -32,5 +32,14 @@ sudo curl -L https://github.com/docker/compose/releases/download/${compose_versi
 sudo chmod +x /usr/local/bin/docker-compose
 sudo curl -L https://raw.githubusercontent.com/docker/compose/${compose_version}/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
 
-# Langs
+# Haskell (including IHaskell)
+sudo dnf -y install cairo-devel pango-devel file-devel zeromq-devel blas-devel lapack-devel
 curl -sSL https://get.haskellstack.org/ | sh
+
+mkdir -p ~/.jupyter; cd ~/.jupyter
+git clone https://github.com/gibiansky/IHaskell
+cd IHaskell
+pip3 install --user -r requirements.txt
+stack install gtk2hs-buildtools
+stack install --fast
+ihaskell install --stack
