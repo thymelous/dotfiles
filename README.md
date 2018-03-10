@@ -2,7 +2,7 @@
 
 My local setup.
 
-## system_bootstap.sh
+## system_bootstrap.sh
 
 The repository includes a collection of scripts I've written for
 bootstrapping a Fedora Workstation install. You can find them in

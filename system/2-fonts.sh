@@ -1,6 +1,8 @@
 mkdir /tmp/fonts_inst
 cd /tmp/fonts_inst
 
+mkdir -p ~/.local/share/fonts/
+
 # Fira (interface, text editing)
 curl -L https://github.com/mozilla/Fira/archive/4.202.tar.gz | tar xz
 mv Fira-4.202/ttf/*.ttf ~/.local/share/fonts/
