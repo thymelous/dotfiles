@@ -27,3 +27,6 @@ rsync -av --progress                 \
 
 chmod +x ./install-tl
 ./install-tl -repository . -profile texlive.profile
+
+cd ..
+rm -r texlive_inst
