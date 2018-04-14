@@ -21,6 +21,12 @@ ln -s `pwd`/.bashrc ~/.bashrc
 mv ~/.vimrc ~/.vimrc.old
 ln -s `pwd`/.vimrc ~/.vimrc
 
+mv ~/.gdbinit ~/.gdbinit.old
+ln -s `pwd`/.gdbinit ~/.gdbinit
+
+mv ~/.radare2rc ~/.radare2rc.old
+ln -s `pwd`/.radare2rc ~/.radare2rc
+
 mkdir -p ~/.vim
 ln -s `pwd`/plugins.vim ~/.vim/plugins.vim
 
