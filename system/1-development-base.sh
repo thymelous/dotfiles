@@ -4,7 +4,7 @@
 sudo dnf -y install gcc-c++ ncurses-devel openssl-devel unixODBC-devel
 
 # Java
-sudo dnf -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+sudo dnf -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel java-1.8.0-openjdk-src
 
 # CLI HTTP client
 sudo dnf -y install httpie
@@ -15,9 +15,6 @@ sudo dnf -y install vim vim-X11 fzf the_silver_searcher inotify-tools
 # asdf version manager
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.1
 source ~/.bashrc
-asdf plugin-add erlang
-asdf plugin-add elixir
-asdf plugin-add nodejs
 
 # Docker
 sudo dnf -y install dnf-plugins-core
@@ -36,10 +33,14 @@ sudo curl -L https://raw.githubusercontent.com/docker/compose/${compose_version}
 sudo dnf -y install cairo-devel pango-devel file-devel zeromq-devel blas-devel lapack-devel
 curl -sSL https://get.haskellstack.org/ | sh
 
-mkdir -p ~/.jupyter; cd ~/.jupyter
-git clone https://github.com/gibiansky/IHaskell
-cd IHaskell
+cd /tmp
+curl -LO https://raw.githubusercontent.com/gibiansky/IHaskell/master/requirements.txt
 pip3 install --user -r requirements.txt
 stack install gtk2hs-buildtools
-stack install --fast
-ihaskell install --stack
+stack install ihaskell
+ihaskell install
+stack install ihaskell-hatex
+stack install ihaskell-plot
+stack install hmatrix
+stack install graphviz
+stack install tabular
