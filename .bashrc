@@ -10,7 +10,7 @@ alias vim="vimx"
 
 alias yt="mpsyt"
 
-alias jup="( cd ~/.jupyter/IHaskell; stack exec jupyter -- notebook --notebook-dir='~' )"
+alias jup="stack exec jupyter -- notebook"
 
 # PS1
 

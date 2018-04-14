@@ -27,6 +27,9 @@ ln -s `pwd`/plugins.vim ~/.vim/plugins.vim
 ln -s `pwd`/gitignore_global ~/gitignore_global
 git config --global core.excludesfile ~/gitignore_global
 
+mkdir -p ~/.stack/global
+ln -s `pwd`/stack.global.yaml ~/.stack/global/stack.yaml
+
 # Continue installation
 cd system
 run-parts .
