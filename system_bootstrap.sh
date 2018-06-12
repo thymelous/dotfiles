@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install base dependencies
-sudo dnf -y install autoconf automake git
+sudo dnf -y install autoconf automake git zsh
 
 # Add RPM Fusion repositories
 sudo dnf -y install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -17,6 +17,9 @@ cd dotfiles
 # Link dotfiles
 mv ~/.bashrc ~/.bashrc.old
 ln -s `pwd`/.bashrc ~/.bashrc
+
+mv ~/.zshrc ~/.zshrc.old
+ln -s `pwd`/.zshrc ~/.zshrc
 
 mv ~/.vimrc ~/.vimrc.old
 ln -s `pwd`/.vimrc ~/.vimrc
