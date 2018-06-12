@@ -12,6 +12,8 @@ alias yt="mpsyt"
 
 alias jup="stack exec jupyter -- notebook"
 
+alias http_server_8080="python3 -m http.server 8000"
+
 # Git shorthands
 alias ga="git add"
 alias gs="git status"
