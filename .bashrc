@@ -68,3 +68,4 @@ bind '"\e[D": backward-char'
 
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
+PATH=$PATH:~/.asdf/installs/nodejs/8.11.2/.npm/bin
