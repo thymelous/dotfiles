@@ -12,6 +12,16 @@ alias yt="mpsyt"
 
 alias jup="stack exec jupyter -- notebook"
 
+# Git shorthands
+alias ga="git add"
+alias gs="git status"
+alias gr="git reset"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gc="git commit"
+alias gpm="git push origin master"
+alias gl="git log"
+
 # PS1
 
 function _set_ps1() {
