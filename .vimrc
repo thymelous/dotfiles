@@ -8,6 +8,8 @@ set cursorline " Highlight current line
 set incsearch " Search when typing
 set title " Update terminal title
 set ttimeoutlen=0 " Remove delay on <Esc>
+set splitbelow " Open new windows below the current one
+set termwinsize=10x0 " Default terminal size = 10 rows x current width
 
 filetype plugin indent on
 
@@ -58,17 +60,18 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 
 " File navigation
-nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>j :GFiles<CR>
 nnoremap <Leader>J :Files<CR>
 nnoremap <Leader>g :Ag<CR>
 
-"
 " Tabs
-"
 nnoremap <silent> <A-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabprevious<CR>
 nnoremap <silent> <C-t> :tabnew<CR>
+
+" Terminal
+nnoremap <Leader>t :term<CR>
 
 " Center search results on the matching line
 map N Nzz
