@@ -26,5 +26,9 @@ npm install -g npm
 npm install -g ijavascript
 ijsinstall
 
+# Wine
+sudo dnf install wine winetricks
+winetricks -q vcrun2012
+
 # OpenCL driver prerequisites
 sudo dnf -y install dkms kernel-devel
