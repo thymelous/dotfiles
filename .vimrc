@@ -13,6 +13,8 @@ set termwinsize=10x0 " Default terminal size = 10 rows x current width
 
 filetype plugin indent on
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 "
 " Plugins
 "
@@ -27,6 +29,9 @@ set background=dark
 colorscheme onedark
 set termguicolors
 
+" Display a vertical line at 80 characters
+set colorcolumn=80
+
 " lightline.vim
 let g:lightline = {
   \ 'colorscheme': 'onedark',
@@ -36,6 +41,12 @@ set noshowmode
 
 " https://github.com/slim-template/vim-slim/issues/19
 let g:polyglot_disabled = ['slim']
+
+let ruby_operators = 1
+
+" Markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_default_key_mappings = 1
 
 "
 " Commands

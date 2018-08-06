@@ -25,6 +25,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Motions
 Plug 'justinmk/vim-sneak'
+Plug 'chaoren/vim-wordmotion'
 
 " File navigation
 Plug 'junegunn/fzf.vim'
@@ -32,5 +33,14 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " FS operations
 Plug 'tpope/vim-eunuch'
+
+" Editing
+Plug 'tpope/vim-surround'
+
+" Enable . repetiton for surround
+Plug 'tpope/vim-repeat'
+
+" Markdown syntax
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
