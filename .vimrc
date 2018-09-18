@@ -15,6 +15,10 @@ filetype plugin indent on
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" When in Normal mode, translate Russian characters into corresponding
+" English keys on a standard QWERTY/ЙЦУКЕН layout.
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
 "
 " Plugins
 "
