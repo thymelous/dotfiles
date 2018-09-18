@@ -5,7 +5,7 @@
 alias vim="vimx" # vim with clipboard support
 alias yt="mpsyt"
 alias jup="stack exec jupyter -- notebook"
-alias httpserver8080="python3 -m http.server 8000"
+alias httpserver8000="python3 -m http.server 8000"
 
 alias ga="git add"
 alias gs="git status"
@@ -26,13 +26,15 @@ setopt pushd_silent
 
 TERM=xterm-256color
 
-bindkey -v          # vi mode
-export KEYTIMEOUT=1 # remove the delay after hitting <ESC>
+bindkey -v
+export KEYTIMEOUT=1 # remove the delay after hitting <ESC> (Vi mode)
 
 bindkey "^?" backward-delete-char
 bindkey -M vicmd '^[[3~' delete-char
 bindkey -M viins '^[[3~' delete-char
 
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 bindkey "^[[5~" beginning-of-line
 bindkey "^[[6~" end-of-line
 
@@ -65,6 +67,19 @@ zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' file-sort modification
 
 fpath=(~/.zsh/zsh-completions/src $fpath)
+
+# Disable remote path globbing for scp
+# https://unix.stackexchange.com/a/106981
+alias scp='noglob scp_wrap'
+function scp_wrap {
+  local -a args
+  local i
+  for i in "$@"; do case $i in
+    (*:*) args+=($i) ;;
+    (*) args+=(${~i}) ;;
+  esac; done
+  command scp "${(@)args}"
+}
 
 ###
 ### Prompt
@@ -116,7 +131,9 @@ zle -N zle-keymap-select
 
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
-PATH=$PATH:~/.asdf/installs/nodejs/8.11.2/.npm/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH=$PATH:$HOME/.cargo/bin:~/.asdf/installs/nodejs/8.11.2/.npm/bin
+PATH=$PATH:~/Android/Sdk/tools:~/Android/Sdk/platform-tools
 
 ###
 ### Plugins
