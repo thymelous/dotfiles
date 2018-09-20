@@ -7,6 +7,12 @@ alias yt="mpsyt"
 alias jup="stack exec jupyter -- notebook"
 alias httpserver8000="python3 -m http.server 8000"
 
+function texwatch {
+  while ! inotifywait -e close_write $1; do
+    xelatex $1
+  done
+}
+
 alias ga="git add"
 alias gs="git status"
 alias gr="git reset"
