@@ -46,6 +46,9 @@ set noshowmode
 " https://github.com/slim-template/vim-slim/issues/19
 let g:polyglot_disabled = ['slim']
 
+" https://github.com/posva/vim-vue/issues/95
+let g:vue_disable_pre_processors = 1
+
 let ruby_operators = 1
 
 " Markdown
