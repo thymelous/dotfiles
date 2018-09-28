@@ -138,7 +138,7 @@ zle -N zle-keymap-select
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
-PATH=$PATH:$HOME/.cargo/bin:~/.asdf/installs/nodejs/8.11.2/.npm/bin
+PATH=$PATH:$HOME/.cargo/bin:~/.asdf/installs/nodejs/8.12.0/.npm/bin
 PATH=$PATH:~/Android/Sdk/tools:~/Android/Sdk/platform-tools
 
 ###

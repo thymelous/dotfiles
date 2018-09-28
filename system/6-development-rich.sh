@@ -18,8 +18,8 @@ iruby register --force
 asdf plugin-add nodejs
 rm -rf ~/.asdf/keyrings/nodejs # https://github.com/asdf-vm/asdf-nodejs/issues/65
 ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodejs 8.11.2
-asdf global nodejs 8.11.2
+asdf install nodejs 8.12.0
+asdf global nodejs 8.12.0
 npm install -g npm
 
 # IJavascript
