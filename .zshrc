@@ -13,6 +13,14 @@ function texwatch {
   done
 }
 
+function texwatchpy {
+  while ! inotifywait -e close_write $1; do
+    xelatex $1
+    pythontex --interpreter python:python3 $1
+    xelatex $1
+  done
+}
+
 alias ga="git add"
 alias gs="git status"
 alias gr="git reset"
