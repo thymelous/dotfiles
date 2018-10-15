@@ -6,6 +6,8 @@ alias vim="vimx" # vim with clipboard support
 alias yt="mpsyt"
 alias jup="stack exec jupyter -- notebook"
 alias httpserver8000="python3 -m http.server 8000"
+alias history="history 1" # display all entries when running `history`
+alias gdiff="colordiff -u" # git-style diff
 
 function texwatch {
   while ! inotifywait -e close_write $1; do
@@ -27,7 +29,7 @@ alias gr="git reset"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gc="git commit"
-alias gpm="git push origin master"
+alias gp="git push"
 alias gl="git log"
 
 setopt auto_pushd # pushd behavior with cd
