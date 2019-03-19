@@ -23,6 +23,20 @@ function texwatchpy {
   done
 }
 
+function texwatchbib {
+  while ! inotifywait -e close_write $1; do
+    xelatex $1; biber "${1%.*}"; xelatex $1
+  done
+}
+
+function gsub {
+  find "$1" -type f -print0 | xargs -0 -n 1 sed -i -e "$2"
+}
+
+function mergepdf {
+  /bin/gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"
+}
+
 alias ga="git add"
 alias gs="git status"
 alias gr="git reset"
