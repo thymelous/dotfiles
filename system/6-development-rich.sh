@@ -30,5 +30,8 @@ ijsinstall
 sudo dnf install wine winetricks
 winetricks -q vcrun2012
 
+# flex & bison, building some tools from source requires them
+sudo dnf -y install flex flex-devel bison bison-devel
+
 # OpenCL driver prerequisites
 sudo dnf -y install dkms kernel-devel

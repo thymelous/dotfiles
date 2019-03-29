@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Archivers
+sudo dnf -y install unar
+
 # Graphics editing
 sudo dnf -y install inkscape ImageMagick
 
