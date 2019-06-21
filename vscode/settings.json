@@ -34,7 +34,9 @@
         // Show the tooltip that appears on mouse hover (definitions, error messages, etc.)
         { "before": ["<leader>", "f"], "commands": ["editor.action.showHover"] },
         // Go to definition
-        { "before": ["<leader>", "g"], "after": ["g", "d"] }
+        { "before": ["<leader>", "g"], "after": ["g", "d"] },
+        // Switch to Visual Block mode (Ctrl maps to VS Code shortcuts)
+        { "before": ["<leader>", "v"], "after": ["<C-v>"] }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         // Copy to system clipboard
