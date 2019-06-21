@@ -39,6 +39,10 @@ git config --global core.excludesfile ~/gitignore_global
 mkdir -p ~/.stack/global
 ln -s `pwd`/stack.global.yaml ~/.stack/global/stack.yaml
 
+mkdir -p ~/.config/Code/User
+ln -s `pwd`/vscode/settings.json ~/.config/Code/User/settings.json
+ln -s `pwd`/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+
 # Continue installation
 cd system
 run-parts .

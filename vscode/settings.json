@@ -1,0 +1,43 @@
+{
+    "window.zoomLevel": 1.1,
+    "workbench.colorTheme": "One Dark Pro Bold",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "html.format.endWithNewline": true,
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    // https://github.com/VSCodeVim/Vim/issues/2419, fix for Caps Lock <-> Esc system remapping
+    "keyboard.dispatch": "keyCode",
+    // Recognize VS-style shortcuts (Ctrl+K,Ctrl+C)
+    "vim.useCtrlKeys": false,
+    // Use separate <leader> mappings to access the system clipboard
+    "vim.useSystemClipboard": false,
+    // Highlight all matches for the current search
+    "vim.hlsearch": true,
+    "vim.leader": " ",
+    "vim.sneak": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Clear search highlight
+        { "before": ["<leader>", "c"], "commands": [":noh"] },
+        // Redo
+        { "before": ["<leader>", "r"], "after": ["<C-r>"] },
+        // Paste from system clipboard
+        { "before": ["<leader>", "p"], "after": ["\"", "*", "p"] },
+        // Search by file name
+        { "before": ["<leader>", "j"], "commands": ["workbench.action.quickOpen"] },
+        // Search
+        { "before": ["<leader>", "g"], "commands": ["workbench.view.search"] },
+        // Center the view on the current search result
+        { "before": ["n"], "after": ["n", "z", "z"] },
+        { "before": ["N"], "after": ["N", "z", "z"] },
+        // Show the tooltip that appears on mouse hover (definitions, error messages, etc.)
+        { "before": ["<leader>", "f"], "commands": ["editor.action.showHover"] },
+        // Go to definition
+        { "before": ["<leader>", "g"], "after": ["g", "d"] }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Copy to system clipboard
+        { "before": ["<leader>", "y"], "after": ["\"", "*", "y"] }
+    ]
+}
