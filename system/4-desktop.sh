@@ -14,12 +14,17 @@ pip3 install mps-youtube --user
 pip3 install youtube-dl --user
 
 # Shell theme
-sudo dnf install -y gnome-tweak-tool arc-theme moka-icon-theme
+sudo dnf install -y gnome-tweak-tool gtk-murrine-engine sassc optipng gtk3-devel
+cd /tmp
+git clone https://github.com/jnsh/arc-theme --depth 1
+cd arc-theme
+sed -i 's/font-size: 9;/font-size: 11;/g' common/gnome-shell/3.36/sass/_common.scss
+./autogen.sh --prefix=/usr --disable-transparency --disable-cinnamon
+sudo make install
 
 # Shell icons
-mkdir -p /tmp/arc_icons
-cd arc_icons
-
+sudo dnf install -y moka-icon-theme
+cd /tmp
 git clone https://github.com/horst3180/arc-icon-theme --depth 1
 cd arc-icon-theme
 ./autogen.sh --prefix=/usr
