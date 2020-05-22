@@ -1,25 +1,25 @@
-flags:
-  ihaskell:
-    binpkgdb: false
-packages:
-- location:
-    git: https://github.com/gibiansky/IHaskell.git
-    commit: 33edf12f1328ef75bd3e347c5ba96f04dda1e752
-  subdirs:
-  - .
-  - ./ipython-kernel
-  - ./ghc-parser
-  - ./ihaskell-display/ihaskell-aeson
-  - ./ihaskell-display/ihaskell-blaze
-  - ./ihaskell-display/ihaskell-charts
-  - ./ihaskell-display/ihaskell-diagrams
-  - ./ihaskell-display/ihaskell-gnuplot
-  - ./ihaskell-display/ihaskell-hatex
-  - ./ihaskell-display/ihaskell-juicypixels
-  - ./ihaskell-display/ihaskell-magic
-  - ./ihaskell-display/ihaskell-plot
-  - ./ihaskell-display/ihaskell-static-canvas
-  - ./ihaskell-display/ihaskell-widgets
-extra-deps: []
-resolver: lts-11.0
-allow-newer: true
+# flags:
+#   ihaskell:
+#     binpkgdb: false
+# packages:
+# - location:
+#     git: https://github.com/gibiansky/IHaskell.git
+#     commit: 33edf12f1328ef75bd3e347c5ba96f04dda1e752
+#   subdirs:
+#   - .
+#   - ./ipython-kernel
+#   - ./ghc-parser
+#   - ./ihaskell-display/ihaskell-aeson
+#   - ./ihaskell-display/ihaskell-blaze
+#   - ./ihaskell-display/ihaskell-charts
+#   - ./ihaskell-display/ihaskell-diagrams
+#   - ./ihaskell-display/ihaskell-gnuplot
+#   - ./ihaskell-display/ihaskell-hatex
+#   - ./ihaskell-display/ihaskell-juicypixels
+#   - ./ihaskell-display/ihaskell-magic
+#   - ./ihaskell-display/ihaskell-plot
+#   - ./ihaskell-display/ihaskell-static-canvas
+#   - ./ihaskell-display/ihaskell-widgets
+# extra-deps: []
+# resolver: lts-11.0
+# allow-newer: true

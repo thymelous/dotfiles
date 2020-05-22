@@ -4,7 +4,7 @@
 
 alias vim="vimx" # vim with clipboard support
 alias yt="mpsyt"
-alias jup="stack exec jupyter -- notebook"
+alias jup="stack --resolver lts-14.17 exec jupyter -- notebook"
 alias httpserver8000="python3 -m http.server 8000"
 alias history="history 1" # display all entries when running `history`
 alias gdiff="colordiff -u" # git-style diff

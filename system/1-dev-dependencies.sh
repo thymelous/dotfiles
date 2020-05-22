@@ -7,7 +7,7 @@ sudo dnf -y install cmake gcc-c++ ncurses-devel openssl-devel unixODBC-devel lib
 sudo dnf -y install flex flex-devel bison bison-devel
 
 # Scripting
-sudo dnf -y install ruby ruby-devel nodejs
+sudo dnf -y install ruby ruby-devel nodejs python3-devel
 
 # OCaml
 sudo dnf -y install ocaml ocaml-ocamldoc ocaml-merlin ocam-findlib opam
@@ -39,17 +39,16 @@ asdf plugin-add elixir
 # sudo curl -L https://github.com/docker/compose/releases/download/${compose_version}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 # sudo chmod +x /usr/local/bin/docker-compose
 # sudo curl -L https://raw.githubusercontent.com/docker/compose/${compose_version}/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
-# 
-# # Haskell (including IHaskell)
-# sudo dnf -y install cairo-devel pango-devel file-devel zeromq-devel blas-devel lapack-devel
-# curl -sSL https://get.haskellstack.org/ | sh
-# 
-# cd /tmp
-# curl -LO https://raw.githubusercontent.com/gibiansky/IHaskell/master/requirements.txt
-# pip3 install --user -r requirements.txt
-# stack install gtk2hs-buildtools
-# stack install ihaskell
-# ihaskell install
+
+# IHaskell
+sudo dnf -y install cairo-devel pango-devel file-devel zeromq-devel blas-devel lapack-devel
+curl -sSL https://get.haskellstack.org/ | sh
+
+cd /tmp
+curl -LO https://raw.githubusercontent.com/gibiansky/IHaskell/master/requirements.txt
+pip3 install --user -r requirements.txt
+stack --resolver lts-14.17 install ihaskell
+ihaskell install --stack
 # stack install ihaskell-hatex
 # stack install ihaskell-plot
 # stack install hmatrix
