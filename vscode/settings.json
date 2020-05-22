@@ -1,6 +1,6 @@
 {
-    "window.zoomLevel": 1.1,
-    "workbench.colorTheme": "One Dark Pro Bold",
+    "window.zoomLevel": 1.2,
+    "workbench.colorTheme": "One Dark Pro",
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
@@ -41,5 +41,21 @@
     "vim.visualModeKeyBindingsNonRecursive": [
         // Copy to system clipboard
         { "before": ["<leader>", "y"], "after": ["\"", "*", "y"] }
-    ]
+    ],
+    "editor.suggestSelection": "first",
+    "[rust]": {
+        "editor.tabSize": 4
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, ColumnLimit: 100 }",
+    "C_Cpp.default.cppStandard": "c++11",
+    "dart.autoImportCompletions": false,
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "typescript.format.semicolons": "insert",
+    "typescript.preferences.quoteStyle": "single",
+    "rust-analyzer.inlayHints.parameterHints": false,
+    "rust-analyzer.inlayHints.typeHints": false,
 }

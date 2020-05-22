@@ -28,5 +28,45 @@
     {
         "key": "ctrl+pageup",
         "command": "-workbench.action.previousEditor"
-    }
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+    },
 ]
