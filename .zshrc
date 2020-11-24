@@ -9,6 +9,7 @@ alias httpserver8000="python3 -m http.server 8000"
 alias history="history 1" # display all entries when running `history`
 alias gdiff="colordiff -u" # git-style diff
 
+# Example usage: texwatch report.tex
 function texwatch {
   while ! inotifywait -e close_write $1; do
     xelatex $1
@@ -29,12 +30,29 @@ function texwatchbib {
   done
 }
 
+# Example usage: watchcmd plantuml diagram.plantuml
+# (texwatch can be rewritten as watchcmd xelatex)
+function watchcmd {
+  while ! inotifywait -e close_write "${@: -1}"; do
+    $@
+  done
+}
+
+# gsub path regex
+# Example usage: gsub css/ "s/--body-font/--main-font/g"
+# (replaces occurrences of --body-font in all files in css/)
 function gsub {
   find "$1" -type f -print0 | xargs -0 -n 1 sed -i -e "$2"
 }
 
+# mergepdf destination.pdf source.pdf...
 function mergepdf {
   /bin/gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"
+}
+
+# Example usage: prettyjson response.json > responsepretty.json
+function prettyjson {
+  python -m json.tool -
 }
 
 alias ga="git add"
