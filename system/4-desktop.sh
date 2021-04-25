@@ -13,14 +13,17 @@ sudo dnf install -y ffmpeg mpv
 pip3 install mps-youtube --user
 pip3 install youtube-dl --user
 
+# OCR
+sudo dnf -y install ocrmypdf tesseract-langpack-rus
+
 # Shell theme
 sudo dnf install -y gnome-tweak-tool gtk-murrine-engine sassc optipng gtk3-devel
 cd /tmp
 git clone https://github.com/jnsh/arc-theme --depth 1
 cd arc-theme
 sed -i 's/font-size: 9;/font-size: 11;/g' common/gnome-shell/3.36/sass/_common.scss
-./autogen.sh --prefix=/usr --disable-transparency --disable-cinnamon
-sudo make install
+meson setup --prefix=/usr -Dthemes=gtk2,gtk3,gnome-shell -Dtransparency=false build/ 
+meson install -C build/
 
 # Shell icons
 sudo dnf install -y moka-icon-theme
